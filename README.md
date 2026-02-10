@@ -20,9 +20,7 @@ The application works within a local Wi-Fi network.
 
 \- threading
 
-\- FastAPI
-
-\- Uvicorn
+\- PyQT6 
 
 
 
