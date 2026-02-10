@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowTitle">
+   <string>Client</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+
+    <!-- TOP BAR -->
+    <item>
+     <layout class="QHBoxLayout" name="layout_top">
+      <item><widget class="QLabel" name="label_ip"><property name="text"><string>IP:</string></property></widget></item>
+      <item><widget class="QLineEdit" name="line_ip"><property name="text"><string>127.0.0.1</string></property></widget></item>
+
+      <item><widget class="QLabel" name="label_port"><property name="text"><string>Port:</string></property></widget></item>
+      <item><widget class="QLineEdit" name="line_port"><property name="text"><string>9090</string></property></widget></item>
+
+      <item><widget class="QPushButton" name="btn_connect"><property name="text"><string>Connect</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_refresh"><property name="text"><string>Refresh</string></property></widget></item>
+      <item><widget class="QPushButton" name="btn_download"><property name="text"><string>Download</string></property></widget></item>
+
+      <item><spacer name="spacer_top"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     </layout>
+    </item>
+
+    <!-- SPLITTER -->
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation"><enum>Qt::Horizontal</enum></property>
+
+      <!-- LEFT -->
+      <widget class="QWidget" name="leftWidget">
+       <layout class="QVBoxLayout" name="layout_left">
+        <item><widget class="QLabel" name="label_files"><property name="text"><string>Files on server</string></property></widget></item>
+        <item><widget class="QListWidget" name="list_files"/></item>
+       </layout>
+      </widget>
+
+      <!-- RIGHT -->
+      <widget class="QWidget" name="rightWidget">
+       <layout class="QVBoxLayout" name="layout_right">
+        <item><widget class="QLabel" name="label_log"><property name="text"><string>Log</string></property></widget></item>
+        <item><widget class="QTextEdit" name="text_log"/></item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+
+    <!-- TABLE -->
+    <item>
+     <widget class="QTableWidget" name="table_downloads">
+      <property name="columnCount"><number>4</number></property>
+      <column><property name="text"><string>File</string></property></column>
+      <column><property name="text"><string>Progress</string></property></column>
+      <column><property name="text"><string>Speed</string></property></column>
+      <column><property name="text"><string>Time</string></property></column>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

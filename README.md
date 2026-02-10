@@ -36,7 +36,8 @@ git clone https://github.com/mrShox-244/WebSocket\_OS.git
 
 cd WebSocket\_OS
 
-pip install -r requirements.txt
-
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt 
 
 
