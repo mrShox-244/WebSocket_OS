@@ -1,41 +1,64 @@
-# \# WebSocket\_OS
+# WebSocket_OS 🌐
+
+## 📌 Description
+
+WebSocket_OS — это образовательный проект на Python, демонстрирующий работу WebSocket-сервера и GUI-клиента.  
+Проект использует многопоточность (threading) и поддерживает до 10 одновременных клиентов без использования очередей.  
+
+Приложение работает в локальной Wi-Fi сети, что позволяет обмениваться сообщениями между устройствами в одной сети.
 
 
+## 🔨 Technologies Used
 
-\## 📌 Description
+- Python 3.10+
+- threading
+- PyQt6 (для графического интерфейса)
+- websocket-client (для клиента)
+- websockets (для сервера)
 
-This is an educational Python project that demonstrates how a WebSocket server and client (GUI) work.
+---
+## 🚀 Installation and Execution
 
-
-
-The project also uses multithreading and supports up to 10 simultaneous clients without using a queue.
-
-The application works within a local Wi-Fi network.
-
-
-
-\## 🔨 Technologies Used
-
-\- Python 3.10+
-
-\- threading
-
-\- PyQT6 
-
-
-
-\## 🚀 Installation and Execution
-
-
+Клонируем репозиторий:
 
 ```bash
+git clone https://github.com/mrShox-244/WebSocket_OS.git
+cd WebSocket_OS
+```
+Создаём виртуальное окружение и активируем его:
 
-git clone https://github.com/mrShox-244/WebSocket\_OS.git
-
-cd WebSocket\_OS
-
+```bash
+Windows:
 python -m venv venv
 venv\Scripts\activate
-pip install -r requirements.txt 
 
+Linux/MacOS:
+python -m venv venv
+source venv/bin/activate
+```
 
+Устанавливаем зависимости:
+```bash
+pip install -r requirements.txt
+```
+Запускаем сервер:
+```bash
+python server.py
+```
+Запускаем клиента (GUI):
+```bash
+python client.py
+```
+```markdown
+💡 Обратите внимание: для корректной работы клиент должен быть подключен к той же локальной Wi-Fi сети, что и сервер.
+```
+---
+
+## 🔹 Features / Функции
+```markdown
+Поддержка до 10 клиентов одновременно
+Многопоточность без очередей
+GUI клиент на PyQt6
+Отображение подключённых клиентов
+Обмен сообщениями в реальном времени
+```
